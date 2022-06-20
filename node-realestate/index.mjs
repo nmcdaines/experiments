@@ -57,9 +57,7 @@ const importedData = [
 ];
 
 /*
-
 loadFile("weekly/20220103.zip").pipe(unzip.Parse()).on("entry", (entry) => console.log(entry.path))
-
 */
 
 const link = importedData[0];
@@ -68,7 +66,6 @@ const currentKey = `${link.dataType}/${link.filename}.${link.extension}`;
 const files = await processPsiArchive(currentKey);
 
 // files[0].data.split("\n").filter(row => row.length).map((row) => rowToRecord(row.split(";")))
-
 // files.map(fileToRecords).reduce((acc, val) => ([...acc, ...val]), [])
 
 function fileToRecords({ data }) {
